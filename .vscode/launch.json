@@ -1,0 +1,38 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    //
+    // See also https://qiita.com/hibara/items/fa66c3241293b7d43eae
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // 構成の名前。起動構成ドロップダウン メニューに表示されます。
+            "name": ".NET Launch (Debug)",
+            // 構成の種類。「Desktop CLR debugger」を指定。
+            "type": "clr",
+            // 構成の要求の種類。「launch」を指定。
+            "request": "launch",
+            // デバッグ セッションの開始前に実行するタスク。「tasks.json」内の「label」で指定した名前を指定します。
+            "preLaunchTask": "build debug",
+            // 起動する（ビルドされた）実行ファイル パス。
+            "program": "${workspaceFolder}/winevt2syslog/bin/x64/Debug/winevt2syslog.exe",
+            // 上記の program に渡されるコマンド ライン引数。
+            "args": [],
+            // 上記の program の作業ディレクトリー パス。
+            "cwd": "${workspaceFolder}/winevt2syslog/bin/x64/Debug",
+            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+            //"console": "integratedTerminal",
+            "console":"internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            // If true, the debbugger should stop at the entry point of the target.
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}

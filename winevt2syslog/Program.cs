@@ -10,6 +10,7 @@ namespace winevt2syslog
     {
         static void Main(string[] args)
         {
+            System.Console.WriteLine("test!");
         }
     }
 }
